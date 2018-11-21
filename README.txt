@@ -9,5 +9,6 @@ Two Servo Motors w/ Wheels and an additional two wheels for it to move like a ca
 AC to 9v battery adapter (powering the arduino to make it more portable and more "wireless")
 Small Breadboard
 USB Cable (transfer code from the PC to the Board)
+
 Software:
 Arduino Software to program the Arduino
