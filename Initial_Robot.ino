@@ -1,7 +1,7 @@
 //Servos
-#include <Servo.h>
-Servo myblueservo;
-Servo mywhiteservo;
+#include <Servo.h> //Sets up servo package in code
+Servo myblueservo; //Initializes 1st servo
+Servo mywhiteservo; //Initializes 2nd servo
 //ultrasonic Pins
 const int pingPin = 6; //Trigger pin = 6
 const int echoPin = 5; // Echo pin = 5
@@ -13,7 +13,7 @@ void setup(){
   pinMode(LED_R, OUTPUT);
 }
 void loop(){
-//Sensor
+//Ultrasonic Sensor settings
 long duration, inches, cm;
 pinMode(pingPin, OUTPUT);
 digitalWrite(pingPin, LOW);
@@ -26,8 +26,8 @@ duration = pulseIn(echoPin, HIGH);
 inches = microsecondsToInches(duration);
 cm = microsecondsToCentimeters(duration);
 delay(100);
-//END
 
+//Drive forward
 if (inches > 24 ){
   myblueservo.attach(8);
   mywhiteservo.attach(7);
@@ -40,6 +40,7 @@ if (inches > 24 ){
   delay(250);
   digitalWrite(LED_R, LOW);
 }
+//Drive Backwards and turns 90° Clockwise
 else
   {
   mywhiteservo.write(160);
@@ -49,10 +50,11 @@ else
   mywhiteservo.detach();
 }
 }
+//Calculations for inches
 long microsecondsToInches(long microseconds) {
    return microseconds / 74 / 2;
 }
-
+//Calculations for centimeters
 long microsecondsToCentimeters(long microseconds) {
    return microseconds / 29 / 2;
 }
