@@ -6,6 +6,8 @@ Arduino Uno
 Bunch of jumper cables
 Ultrasonic Sensor
 Two Servo Motors w/ Wheels and an additional two wheels for it to move like a car
+Four leds of your choice; I chose two white in back and two yellow in front
+Buzzer to make noise
 AC to 9v battery adapter (powering the arduino to make it more portable and more "wireless")
 Small Breadboard
 USB Cable (transfer code from the PC to the Board)
