@@ -1,3 +1,4 @@
+//Created by TomaszBrauntsch
 //Servos
 #include <Servo.h> //Sets up servo package in code
 Servo myblueservo; //Initializes 1st servo
